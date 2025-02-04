@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import Button from "./Button";
 import Heading from "./Heading";
 
@@ -40,5 +41,12 @@ function ConfirmDelete({ resourceName, onConfirm, disabled }) {
     </StyledConfirmDelete>
   );
 }
+0;
+
+ConfirmDelete.propTypes = {
+  resourceName: PropTypes.string.isRequired,
+  onConfirm: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+};
 
 export default ConfirmDelete;

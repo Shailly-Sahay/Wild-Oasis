@@ -1,15 +1,17 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import GlobalStyles from "./styles/globalStyles";
-import Dashboard from "./pages/Dashboard";
-import Bookings from "./pages/Bookings";
-import Cabins from "./pages/Cabins";
-import Account from "./pages/Account";
-import Login from "./pages/Login";
-import PageNotFound from "./pages/PageNotFound";
-import Settings from "./pages/Settings";
-import Users from "./pages/Users";
-import AppLayout from "./ui/AppLayout";
+import {
+  Dashboard,
+  Bookings,
+  Cabins,
+  Account,
+  Login,
+  PageNotFound,
+  Settings,
+  Users,
+} from "./pages";
+import AppLayout from "./layout/AppLayout";
 
 const App = () => {
   return (

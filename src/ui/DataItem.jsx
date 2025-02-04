@@ -20,6 +20,8 @@ const Label = styled.span`
   }
 `;
 
+import PropTypes from "prop-types";
+
 function DataItem({ icon, label, children }) {
   return (
     <StyledDataItem>
@@ -31,5 +33,11 @@ function DataItem({ icon, label, children }) {
     </StyledDataItem>
   );
 }
+
+DataItem.propTypes = {
+  icon: PropTypes.element.isRequired,
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default DataItem;
