@@ -11,6 +11,7 @@ export { default as FileInput } from "./FileInput";
 // FILTER
 // FLAG
 export { default as Form } from "./Form";
+export { default as FormRow } from "./FormRow";
 export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as Input } from "./Input";
