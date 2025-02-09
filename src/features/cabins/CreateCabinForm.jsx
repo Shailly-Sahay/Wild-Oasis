@@ -60,8 +60,10 @@ function CreateCabinForm() {
     },
   });
 
+  // https://qkcehupmupkseerzayxq.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg
+
   function onSubmit(data) {
-    mutate(data);
+    mutate({ ...data, image: data.image[0] });
   }
 
   function onError(error) {
@@ -118,7 +120,7 @@ function CreateCabinForm() {
           {...register("discount", {
             required: "This field is required",
             validate: (value) =>
-              value > getValues().regularPrice ||
+              value < getValues().regularPrice ||
               "Discount should be less than regular price",
           })}
         />
@@ -137,7 +139,11 @@ function CreateCabinForm() {
       </FormRow>
 
       <FormRow label="Cabin photo" error={errors?.image?.message}>
-        <FileInput id="image" accept="image/*" />
+        <FileInput
+          id="image"
+          accept="image/*"
+          {...register("image", { required: "This field is required" })}
+        />
       </FormRow>
 
       <FormRow>
